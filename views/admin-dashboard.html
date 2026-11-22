@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord — Ruben EBAH</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#08090b">
+  <meta name="csrf-token" content="{{CSRF}}">
+  <meta name="admin-user" content="{{USERNAME}}">
+  <meta name="must-change" content="{{MUST_CHANGE}}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+      <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-5M4 13a8 8 0 0 0 14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6"/></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 9v5M12 17h.01"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-2a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v2"/><path d="M17 4.5a3.5 3.5 0 0 1 0 7M19 14a5 5 0 0 1 3 4.5V21"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-device" viewBox="0 0 24 24"><rect x="2" y="4" width="14" height="11" rx="2"/><path d="M6 19h6M9 15v4"/><rect x="17" y="9" width="5" height="11" rx="1.5"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+      <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M3 12h5l2 3h4l2-3h5"/><path d="M5 4h14l2 8v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6Z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.9-5.4 2.9 1-6L3.2 9.4l6.1-.9L12 3Z"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="admin-shell">
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <aside class="admin-sidebar" id="adminSidebar">
+      <a class="admin-brand" href="/admin/dashboard">
+        <span class="admin-brand__mark">RE</span>
+        <span class="admin-brand__text">
+          <strong>Ruben EBAH</strong>
+          <span>Administration</span>
+        </span>
+      </a>
+
+      <nav class="admin-nav" aria-label="Navigation administrateur">
+        <span class="admin-nav-label">Pilotage</span>
+        <button type="button" data-view="overview" class="is-active">
+          <svg class="icon"><use href="#i-grid"/></svg> Vue d'ensemble
+        </button>
+        <button type="button" data-view="visits">
+          <svg class="icon"><use href="#i-eye"/></svg> Visites
+        </button>
+        <button type="button" data-view="activity">
+          <svg class="icon"><use href="#i-activity"/></svg> Activité
+        </button>
+
+        <span class="admin-nav-label">Gestion</span>
+        <button type="button" data-view="projects">
+          <svg class="icon"><use href="#i-folder"/></svg> Projets
+        </button>
+        <button type="button" data-view="messages">
+          <svg class="icon"><use href="#i-mail"/></svg> Messages
+          <span class="nav-badge" id="navUnread" hidden>0</span>
+        </button>
+        <button type="button" data-view="security">
+          <svg class="icon"><use href="#i-shield"/></svg> Sécurité
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="/" target="_blank" rel="noopener">
+          <svg class="icon"><use href="#i-globe"/></svg> Voir le site
+        </a>
+        <button type="button" id="logoutBtn">
+          <svg class="icon"><use href="#i-logout"/></svg> Déconnexion
+        </button>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <button class="sidebar-toggle" type="button" id="sidebarToggle" aria-label="Ouvrir le menu">
+          <svg class="icon"><use href="#i-menu"/></svg>
+        </button>
+        <div>
+          <h1 id="viewTitle">Vue d'ensemble</h1>
+          <p id="viewSub">Activité de votre portfolio</p>
+        </div>
+        <div class="topbar-actions">
+          <span class="live-pill">En direct</span>
+          <span class="user-chip">
+            <span class="user-chip__avatar">{{USERNAME}}</span>
+            <span><span>{{USERNAME}}</span><small>Administrateur</small></span>
+          </span>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <!-- VUE D'ENSEMBLE -->
+        <section class="admin-section" data-section="overview" id="view-overview">
+          <div class="notice notice--warn" id="passwordNotice" hidden>
+            <svg><use href="#i-alert"/></svg>
+            <span><strong>Changez votre mot de passe initial.</strong> Votre espace utilise encore le mot de passe par défaut. <a href="#" data-goto="security">Ouvrir les paramètres de sécurité</a>.</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-card__top">
+                <span class="stat-card__icon"><svg class="icon"><use href="#i-eye"/></svg></span>
+                <span class="stat-card__label">Pages vues</span>
+              </div>
+              <div class="stat-card__value" id="statTotal">—</div>
+              <div class="stat-card__hint"><span id="statWeek">—</span> sur les 7 derniers jours</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__top">
+                <span class="stat-card__icon"><svg class="icon"><use href="#i-users"/></svg></span>
+                <span class="stat-card__label">Visiteurs uniques</span>
+              </div>
+              <div class="stat-card__value" id="statUnique">—</div>
+              <div class="stat-card__hint">Basé sur les cookies visiteurs</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__top">
+                <span class="stat-card__icon"><svg class="icon"><use href="#i-chart"/></svg></span>
+                <span class="stat-card__label">Aujourd'hui</span>
+              </div>
+              <div class="stat-card__value" id="statToday">—</div>
+              <div class="stat-card__hint">Visites depuis minuit</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__top">
+                <span class="stat-card__icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+                <span class="stat-card__label">Durée moyenne</span>
+              </div>
+              <div class="stat-card__value" id="statDuration">—</div>
+              <div class="stat-card__hint">Temps passé par visite</div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card__head">
+                <div><h2>Visites des 14 derniers jours</h2><p>Pages vues et visiteurs uniques</p></div>
+                <a class="card__link" href="#" data-goto="visits">Tout voir</a>
+              </div>
+              <div class="card__body">
+                <div class="chart-wrap"><canvas id="visitsChart"></canvas></div>
+                <div class="chart-legend">
+                  <span><i style="background:#c9f45b"></i> Pages vues</span>
+                  <span><i style="background:#6b717a"></i> Visiteurs uniques</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__head"><div><h2>Appareils</h2><p>Répartition des visites</p></div></div>
+              <div class="card__body">
+                <div class="donut-wrap">
+                  <canvas id="devicesChart" class="donut-canvas"></canvas>
+                  <ul class="donut-legend" id="devicesLegend"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2 grid-2--even">
+            <div class="card">
+              <div class="card__head"><div><h2>Pages les plus consultées</h2><p>Top 6</p></div></div>
+              <div class="card__body"><div class="rank-list" id="topPages"></div></div>
+            </div>
+            <div class="card">
+              <div class="card__head">
+                <div><h2>Activité récente</h2><p>Dernières actions</p></div>
+                <a class="card__link" href="#" data-goto="activity">Journal</a>
+              </div>
+              <div class="card__body"><div class="activity" id="recentActivity"></div></div>
+            </div>
+          </div>
+
+          <div class="grid-2 grid-2--even" style="margin-top:14px;">
+            <div class="card">
+              <div class="card__head"><div><h2>Projets les plus consultés</h2><p>Pages projets</p></div></div>
+              <div class="card__body"><div class="rank-list" id="topProjects"></div></div>
+            </div>
+            <div class="card">
+              <div class="card__head"><div><h2>Sources de trafic</h2><p>Référents</p></div></div>
+              <div class="card__body"><div class="rank-list" id="referrers"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VISITES -->
+        <section class="admin-section" data-section="visits" id="view-visits" hidden>
+          <div class="card">
+            <div class="toolbar">
+              <div class="search-box">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
+                <input type="search" id="visitsSearch" placeholder="Rechercher une page, un appareil, une IP…" aria-label="Rechercher dans les visites">
+              </div>
+              <button class="btn" type="button" id="visitsRefresh">
+                <svg><use href="#i-refresh"/></svg> Actualiser
+              </button>
+              <div class="toolbar__spacer"></div>
+              <a class="btn" href="/api/admin/visits/export">
+                <svg><use href="#i-download"/></svg> Exporter en CSV
+              </a>
+            </div>
+            <div class="table-wrap">
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Page</th>
+                    <th>Appareil</th>
+                    <th>Référent</th>
+                    <th>IP</th>
+                    <th>Durée</th>
+                    <th>Scroll</th>
+                  </tr>
+                </thead>
+                <tbody id="visitsBody">
+                  <tr><td colspan="7"><div class="skeleton" style="height:40px;"></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination">
+              <span id="visitsMeta">Chargement…</span>
+              <div class="pagination__buttons">
+                <button class="btn btn--sm" type="button" id="visitsPrev" disabled><svg><use href="#i-arrow-left"/></svg> Précédent</button>
+                <button class="btn btn--sm" type="button" id="visitsNext" disabled>Suivant <svg><use href="#i-arrow-right"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACTIVITÉ -->
+        <section class="admin-section" data-section="activity" id="view-activity" hidden>
+          <div class="card">
+            <div class="toolbar">
+              <select class="select" id="activityFilter" aria-label="Filtrer l'activité">
+                <option value="all">Toutes les actions</option>
+                <option value="auth">Connexions</option>
+                <option value="project">Projets</option>
+                <option value="message">Messages</option>
+              </select>
+              <button class="btn" type="button" id="activityRefresh">
+                <svg><use href="#i-refresh"/></svg> Actualiser
+              </button>
+              <div class="toolbar__spacer"></div>
+              <span class="cell-sub" id="activityCount"></span>
+            </div>
+            <div class="activity" id="activityList" style="padding: 4px 18px;"></div>
+            <div class="pagination">
+              <span id="activityMeta"></span>
+              <div class="pagination__buttons">
+                <button class="btn btn--sm" type="button" id="activityPrev" disabled><svg><use href="#i-arrow-left"/></svg> Précédent</button>
+                <button class="btn btn--sm" type="button" id="activityNext" disabled>Suivant <svg><use href="#i-arrow-right"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section class="admin-section" data-section="projects" id="view-projects" hidden>
+          <div class="card">
+            <div class="toolbar">
+              <div>
+                <strong id="projectsCount" style="font-family: var(--font-display); font-size: 13px;">Projets</strong>
+                <span class="cell-sub">Ajoutez, modifiez ou retirez vos réalisations</span>
+              </div>
+              <div class="toolbar__spacer"></div>
+              <button class="btn btn--accent" type="button" id="newProjectBtn">
+                <svg><use href="#i-plus"/></svg> Nouveau projet
+              </button>
+            </div>
+            <div class="admin-projects" id="projectsList"></div>
+          </div>
+        </section>
+
+        <!-- MESSAGES -->
+        <section class="admin-section" data-section="messages" id="view-messages" hidden>
+          <div class="card">
+            <div class="toolbar">
+              <div>
+                <strong id="messagesCount" style="font-family: var(--font-display); font-size: 13px;">Messages</strong>
+                <span class="cell-sub">Demandes reçues via le formulaire de contact</span>
+              </div>
+              <div class="toolbar__spacer"></div>
+              <button class="btn" type="button" id="messagesRefresh">
+                <svg><use href="#i-refresh"/></svg> Actualiser
+              </button>
+            </div>
+            <div class="message-list" id="messagesList"></div>
+          </div>
+        </section>
+
+        <!-- SÉCURITÉ -->
+        <section class="admin-section" data-section="security" id="view-security" hidden>
+          <div class="security-grid">
+            <div class="card">
+              <div class="card__head"><div><h2>Changer le mot de passe</h2><p>Compte administrateur</p></div></div>
+              <div class="card__body">
+                <form class="form-grid" id="passwordForm" novalidate>
+                  <div class="form-field">
+                    <label for="currentPassword">Mot de passe actuel</label>
+                    <input type="password" id="currentPassword" autocomplete="current-password" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="newPassword">Nouveau mot de passe</label>
+                    <input type="password" id="newPassword" autocomplete="new-password" required minlength="12">
+                    <small>12 caractères minimum, avec majuscule, minuscule, chiffre et caractère spécial.</small>
+                  </div>
+                  <div class="form-field">
+                    <label for="confirmPassword">Confirmer le nouveau mot de passe</label>
+                    <input type="password" id="confirmPassword" autocomplete="new-password" required>
+                  </div>
+                  <div>
+                    <button class="btn btn--accent" type="submit" id="passwordSubmit">
+                      <svg><use href="#i-lock"/></svg> Mettre à jour
+                    </button>
+                  </div>
+                  <p id="passwordMsg" style="font-size: 11px; display: none;"></p>
+                </form>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__head"><div><h2>Session actuelle</h2><p>Informations de connexion</p></div></div>
+              <div class="card__body">
+                <div class="session-info" id="sessionInfo"></div>
+                <button class="btn btn--danger" type="button" id="logoutAllBtn" style="margin-top: 16px;">
+                  <svg><use href="#i-logout"/></svg> Révoquer les autres sessions
+                </button>
+              </div>
+            </div>
+
+            <div class="card" style="grid-column: 1 / -1;">
+              <div class="card__head"><div><h2>Protections actives</h2><p>Mesures de sécurité du back-office</p></div></div>
+              <div class="card__body">
+                <ul class="security-list">
+                  <li><svg><use href="#i-check"/></svg><span><strong>Mot de passe haché avec scrypt</strong> — le mot de passe n'est jamais stocké en clair, ni transmis à un tiers.</span></li>
+                  <li><svg><use href="#i-check"/></svg><span><strong>Sessions HttpOnly et SameSite Strict</strong> — les cookies ne sont pas accessibles en JavaScript et ne partent pas depuis un autre site.</span></li>
+                  <li><svg><use href="#i-check"/></svg><span><strong>Protection CSRF</strong> — chaque action sensible exige un jeton unique lié à votre session.</span></li>
+                  <li><svg><use href="#i-check"/></svg><span><strong>Limitation des tentatives</strong> — 5 essais maximum, puis verrouillage temporaire pendant 15 minutes.</span></li>
+                  <li><svg><use href="#i-check"/></svg><span><strong>En-têtes de sécurité stricts</strong> — CSP, anti-clickjacking, nosniff et politique de référent.</span></li>
+                  <li><svg><use href="#i-check"/></svg><span><strong>Journal d'audit</strong> — chaque connexion, modification et suppression est enregistrée avec l'IP et l'horodatage.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- MODALE PROJET -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <div>
+          <h2 id="projectModalTitle">Nouveau projet</h2>
+          <p id="projectModalSub">Ajouter une réalisation au portfolio</p>
+        </div>
+        <button class="modal__close" type="button" data-close="projectModal" aria-label="Fermer">
+          <svg><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <form class="form-grid" id="projectForm" novalidate>
+          <input type="hidden" id="projectId">
+
+          <div class="form-field">
+            <label for="projectTitle">Titre du projet</label>
+            <input type="text" id="projectTitle" required maxlength="120" placeholder="Ex. Plateforme de gestion scolaire">
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="projectCategory">Catégorie</label>
+              <select id="projectCategory">
+                <option value="web">Web</option>
+                <option value="application">Application</option>
+                <option value="design">Design</option>
+                <option value="motion">Motion</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="projectYear">Année</label>
+              <input type="number" id="projectYear" min="2020" max="2039" value="2026" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="projectRole">Rôle</label>
+              <input type="text" id="projectRole" maxlength="100" value="Développeur & designer">
+            </div>
+            <div class="form-field">
+              <label for="projectClient">Client / contexte</label>
+              <input type="text" id="projectClient" maxlength="140" value="Projet personnel">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="projectDuration">Durée</label>
+              <input type="text" id="projectDuration" maxlength="60" placeholder="Ex. 4 semaines">
+            </div>
+            <div class="form-field">
+              <label for="projectOrder">Ordre d'affichage</label>
+              <input type="number" id="projectOrder" min="0" max="999" value="1">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="projectExcerpt">Résumé court</label>
+            <textarea id="projectExcerpt" required maxlength="300" style="min-height: 64px;" placeholder="Une phrase qui présente le projet."></textarea>
+            <small>Affiché sur la carte du projet. 300 caractères maximum.</small>
+          </div>
+
+          <div class="form-field">
+            <label for="projectDescription">Description complète</label>
+            <textarea id="projectDescription" required maxlength="12000" style="min-height: 180px;" placeholder="## Le contexte&#10;&#10;Votre texte…&#10;&#10;- Point clé 1&#10;- Point clé 2"></textarea>
+            <small>Utilisez <code>## Titre</code> pour un sous-titre et <code>- </code> en début de ligne pour une liste.</small>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="projectTags">Mots-clés</label>
+              <input type="text" id="projectTags" maxlength="300" placeholder="Site vitrine, Mobile-first">
+              <small>Séparés par des virgules.</small>
+            </div>
+            <div class="form-field">
+              <label for="projectStack">Stack technique</label>
+              <input type="text" id="projectStack" maxlength="400" placeholder="HTML, CSS, JavaScript">
+              <small>Séparés par des virgules.</small>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Image de couverture</label>
+            <div class="cover-upload" id="coverUpload">
+              <div class="cover-upload__empty" id="coverEmpty">
+                <svg><use href="#i-upload"/></svg>
+                <span>Cliquez ou déposez une image (JPEG, PNG, WebP — 3 Mo max)</span>
+              </div>
+              <img id="coverPreview" alt="Aperçu de la couverture" hidden>
+              <span class="cover-upload__badge" id="coverBadge" hidden>Remplacer</span>
+              <input type="file" id="coverInput" accept="image/jpeg,image/png,image/webp">
+            </div>
+            <small>Format conseillé : 1600 × 1000 px. Laissez vide pour conserver l'image par défaut.</small>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="projectLive">Lien du site (https)</label>
+              <input type="url" id="projectLive" maxlength="300" placeholder="https://mon-projet.com">
+            </div>
+            <div class="form-field">
+              <label for="projectRepo">Lien du code (https)</label>
+              <input type="url" id="projectRepo" maxlength="300" placeholder="https://github.com/…">
+            </div>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="projectFeatured">
+            <span class="switch__track"></span>
+            Mettre ce projet à la une
+          </label>
+        </form>
+      </div>
+      <div class="modal__foot">
+        <button class="btn btn--ghost" type="button" data-close="projectModal">Annuler</button>
+        <button class="btn btn--accent" type="submit" form="projectForm" id="projectSaveBtn">
+          <svg><use href="#i-check"/></svg> Enregistrer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE MESSAGE -->
+  <div class="modal modal--md" id="messageModal" role="dialog" aria-modal="true" aria-labelledby="messageModalTitle" aria-hidden="true">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <div>
+          <h2 id="messageModalTitle">Message</h2>
+          <p id="messageModalSub">Reçu via le formulaire de contact</p>
+        </div>
+        <button class="modal__close" type="button" data-close="messageModal" aria-label="Fermer">
+          <svg><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <div class="modal__body" id="messageModalBody"></div>
+      <div class="modal__foot">
+        <button class="btn btn--danger" type="button" id="messageDeleteBtn">
+          <svg><use href="#i-trash"/></svg> Supprimer
+        </button>
+        <a class="btn btn--accent" id="messageReplyBtn" href="#">
+          <svg><use href="#i-mail"/></svg> Répondre par email
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE CONFIRMATION -->
+  <div class="modal modal--sm" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" aria-hidden="true">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <div>
+          <h2 id="confirmTitle">Confirmer</h2>
+          <p>Cette action est définitive</p>
+        </div>
+        <button class="modal__close" type="button" data-close="confirmModal" aria-label="Fermer">
+          <svg><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <p id="confirmText" style="font-size: 12.5px; color: var(--muted); line-height: 1.65;"></p>
+      </div>
+      <div class="modal__foot">
+        <button class="btn btn--ghost" type="button" data-close="confirmModal">Annuler</button>
+        <button class="btn btn--danger" type="button" id="confirmAccept">Confirmer</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="/assets/js/admin.js" defer></script>
+</body>
+</html>

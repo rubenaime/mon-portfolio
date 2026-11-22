@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Visuel de projet">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#132a2b"/><stop offset="1" stop-color="#0b1113"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid1" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <filter id="blur1" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="noise1"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".05"/></feComponentTransfer><feComposite operator="in" in2="SourceGraphic"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg1)"/>
+  <rect width="1600" height="1000" fill="url(#grid1)"/>
+  <ellipse cx="1180" cy="180" rx="520" ry="420" fill="url(#glow1)" opacity=".5"/>
+  <circle cx="1240" cy="820" r="360" fill="#ffffff" opacity=".05" filter="url(#blur1)"/>
+  
+  <g transform="translate(190 250)">
+    <rect x="0" y="0" width="760" height="500" rx="26" fill="#0f1719" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="0" y="0" width="760" height="52" rx="26" fill="#ffffff" fill-opacity=".05"/>
+    <circle cx="30" cy="26" r="6" fill="#ff8a4c"/><circle cx="52" cy="26" r="6" fill="#ffd166"/><circle cx="74" cy="26" r="6" fill="#6ee7b7"/>
+    <rect x="36" y="86" width="250" height="14" rx="7" fill="#ffffff" fill-opacity=".18"/>
+    <rect x="36" y="114" width="170" height="10" rx="5" fill="#ffffff" fill-opacity=".1"/>
+    <g transform="translate(40 170)">
+      <g transform="translate(0 0)">
+        <rect x="0" y="0" width="140" height="270" rx="16" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity=".09"/>
+        <rect x="50" y="34" width="40" height="14" rx="7" fill="#ffffff" fill-opacity=".3"/>
+        <path d="M46 52h48l12 22v138a18 18 0 0 1-18 18H52a18 18 0 0 1-18-18V74z" fill="#f4a261" fill-opacity=".85"/>
+        <rect x="42" y="110" width="56" height="46" rx="6" fill="#0b1113" fill-opacity=".55"/>
+        <rect x="30" y="230" width="80" height="10" rx="5" fill="#ffffff" fill-opacity=".2"/>
+      </g><g transform="translate(168 0)">
+        <rect x="0" y="0" width="140" height="270" rx="16" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity=".09"/>
+        <rect x="50" y="34" width="40" height="14" rx="7" fill="#ffffff" fill-opacity=".3"/>
+        <path d="M46 52h48l12 22v138a18 18 0 0 1-18 18H52a18 18 0 0 1-18-18V74z" fill="#2a9d8f" fill-opacity=".85"/>
+        <rect x="42" y="110" width="56" height="46" rx="6" fill="#0b1113" fill-opacity=".55"/>
+        <rect x="30" y="230" width="80" height="10" rx="5" fill="#ffffff" fill-opacity=".2"/>
+      </g><g transform="translate(336 0)">
+        <rect x="0" y="0" width="140" height="270" rx="16" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity=".09"/>
+        <rect x="50" y="34" width="40" height="14" rx="7" fill="#ffffff" fill-opacity=".3"/>
+        <path d="M46 52h48l12 22v138a18 18 0 0 1-18 18H52a18 18 0 0 1-18-18V74z" fill="#e76f51" fill-opacity=".85"/>
+        <rect x="42" y="110" width="56" height="46" rx="6" fill="#0b1113" fill-opacity=".55"/>
+        <rect x="30" y="230" width="80" height="10" rx="5" fill="#ffffff" fill-opacity=".2"/>
+      </g><g transform="translate(504 0)">
+        <rect x="0" y="0" width="140" height="270" rx="16" fill="#ffffff" fill-opacity="0.08499999999999999" stroke="#ffffff" stroke-opacity=".09"/>
+        <rect x="50" y="34" width="40" height="14" rx="7" fill="#ffffff" fill-opacity=".3"/>
+        <path d="M46 52h48l12 22v138a18 18 0 0 1-18 18H52a18 18 0 0 1-18-18V74z" fill="#8ab17d" fill-opacity=".85"/>
+        <rect x="42" y="110" width="56" height="46" rx="6" fill="#0b1113" fill-opacity=".55"/>
+        <rect x="30" y="230" width="80" height="10" rx="5" fill="#ffffff" fill-opacity=".2"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(1030 300)">
+    <circle cx="180" cy="180" r="180" fill="#f4a261" fill-opacity=".12"/>
+    <circle cx="180" cy="180" r="120" fill="none" stroke="#f4a261" stroke-opacity=".5" stroke-width="1.5"/>
+    <path d="M120 260V150l60-70 60 70v110" fill="none" stroke="#ffd7b0" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M160 260v-62h40v62" fill="none" stroke="#ffd7b0" stroke-width="3"/>
+    <text x="180" y="420" text-anchor="middle" font-family="monospace" font-size="17" letter-spacing="6" fill="#ffd7b0" fill-opacity=".75">COMMERCE LOCAL</text>
+  </g>
+  <text x="120" y="880" font-family="monospace" font-size="20" letter-spacing="10" fill="#ffffff" fill-opacity=".4">SITE VITRINE / COMMANDE WHATSAPP</text>
+
+  <rect width="1600" height="1000" filter="url(#noise1)" opacity=".5"/>
+  <circle cx="1400" cy="120" r="150" fill="none" stroke="#f4a261" stroke-opacity=".35"/>
+</svg>

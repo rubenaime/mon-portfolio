@@ -1,0 +1,181 @@
+[
+  {
+    "id": "p_minidepot",
+    "slug": "mini-depot-chez-ebah",
+    "title": "Mini Dépôt chez EBAH",
+    "category": "web",
+    "year": "2026",
+    "role": "Développeur & designer",
+    "client": "Mini Dépôt chez EBAH — Hévié",
+    "duration": "3 semaines",
+    "excerpt": "Site vitrine et simulateur de commande WhatsApp pour un dépôt de boissons à Hévié. Un catalogue clair, pensé pour le mobile et la vente au comptoir.",
+    "description": "## Le contexte\n\nLe Mini Dépôt chez EBAH est un commerce de boissons situé à Hévié Houimin, au Bénin. Les commandes se faisaient uniquement par téléphone et sur WhatsApp, avec des allers-retours fréquents pour vérifier les stocks et les conditionnements disponibles.\n\nL'objectif était simple : offrir aux clients un catalogue lisible, accessible depuis un téléphone, et transformer une visite en commande WhatsApp en moins d'une minute.\n\n## Mon rôle\n\nJ'ai assuré l'ensemble du projet : cadrage avec le commerçant, architecture de l'information, design de l'interface, développement front-end et mise en ligne sur Netlify.\n\n- Direction artistique et identité du site\n- Design responsive mobile-first\n- Développement HTML, CSS et JavaScript\n- Simulateur de commande et génération du message WhatsApp\n- Optimisation des performances et référencement local\n\n## Les fonctionnalités clés\n\n- Catalogue de boissons classé par familles : bières, sodas, eaux, vins et liqueurs\n- Prix et conditionnements : casier, demi-casier, carton, bouteille\n- Simulateur de commande avec quantités et récapitulatif\n- Envoi de la commande sur l'une des deux lignes WhatsApp du commerce\n- Section événements pour les mariages, dots et fêtes de famille\n- Itinéraire et horaires d'ouverture accessibles en un clic\n\n## Le résultat\n\nUn site rapide, autonome et sans dépendance à un système de paiement complexe : le commerçant reçoit une commande déjà rédigée, avec les bons produits et les bonnes quantités. Le site est aujourd'hui en ligne et utilisé par le commerce.",
+    "tags": [
+      "Site vitrine",
+      "Mobile-first",
+      "WhatsApp"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Netlify"
+    ],
+    "cover": "/assets/img/cover-minidepot.svg",
+    "liveUrl": "https://minidepot.netlify.app/",
+    "repoUrl": "https://github.com/rubenaime",
+    "featured": false,
+    "order": 1,
+    "createdAt": "2026-01-15T09:00:00.000Z",
+    "updatedAt": "2026-01-15T09:00:00.000Z"
+  },
+  {
+    "id": "p_silcampus",
+    "slug": "sil-campus",
+    "title": "SIL Campus",
+    "category": "application",
+    "year": "2026",
+    "role": "Développeur full-stack",
+    "client": "Projet académique — ISMT Saint Salomon",
+    "duration": "6 semaines",
+    "excerpt": "Tableau de bord de gestion du parc informatique et du support utilisateurs d'un campus universitaire. Une réponse concrète aux problèmes rencontrés pendant mon stage.",
+    "description": "## Le contexte\n\nPendant mon stage au service informatique de l'ISMT Saint Salomon, j'ai constaté que le suivi du matériel, des pannes et des demandes d'assistance se faisait sur papier et dans plusieurs fichiers dispersés. Résultat : des doublons, des interventions oubliées et aucune vision d'ensemble.\n\nSIL Campus est né de ce constat : un outil unique pour savoir quel poste est en panne, qui intervient et où en est chaque demande.\n\n## Mon rôle\n\nJ'ai conçu et développé l'application de bout en bout, en partant des besoins réels des agents du service informatique.\n\n- Modélisation de la base de données (postes, pannes, interventions, utilisateurs)\n- Développement back-end et API\n- Interface d'administration responsive\n- Système de priorités et de suivi des tickets\n- Documentation technique et guide d'utilisation\n\n## Les fonctionnalités clés\n\n- Inventaire du parc : ordinateurs, imprimantes, équipements réseau\n- Déclaration et suivi des incidents avec niveau de priorité\n- Attribution des interventions à un technicien\n- Historique complet par poste et par utilisateur\n- Tableau de bord : équipements actifs, tickets ouverts, délais moyens\n- Gestion des accès par rôle\n\n## Ce que j'ai appris\n\nCe projet m'a conforté dans une idée simple : un bon outil interne doit ressembler à la façon dont les gens travaillent déjà. J'ai passé autant de temps à observer et à poser des questions qu'à coder — et c'est ce qui a fait la différence.",
+    "tags": [
+      "Gestion de parc",
+      "Support IT",
+      "Dashboard"
+    ],
+    "stack": [
+      "Node.js",
+      "MySQL",
+      "JavaScript",
+      "CSS"
+    ],
+    "cover": "/assets/img/cover-silcampus.svg",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/rubenaime",
+    "featured": false,
+    "order": 2,
+    "createdAt": "2026-02-02T09:00:00.000Z",
+    "updatedAt": "2026-02-02T09:00:00.000Z"
+  },
+  {
+    "id": "p_fintrack",
+    "slug": "fintrack-benin",
+    "title": "FinTrack Bénin",
+    "category": "application",
+    "year": "2025",
+    "role": "Développeur & analyste données",
+    "client": "Projet de stage — P.E.B.Co-BETHESDA",
+    "duration": "4 semaines",
+    "excerpt": "Outil de suivi des transactions et d'archivage sécurisé pour une institution de microfinance. Moins de saisie, plus de contrôle.",
+    "description": "## Le contexte\n\nAu sein de l'agence de Cocodji, les transactions financières étaient saisies puis contrôlées manuellement, et les dossiers clients étaient archivés dans des classeurs physiques. La recherche d'un dossier prenait du temps et le risque d'erreur de saisie était réel.\n\nFinTrack Bénin répond à deux besoins : fiabiliser la saisie et retrouver une information en quelques secondes.\n\n## Mon rôle\n\n- Analyse du processus de saisie existant\n- Conception d'un modèle de données pour les transactions et les dossiers clients\n- Développement d'un tableau de bord de contrôle\n- Numérisation et indexation des dossiers\n- Formation des agents à l'outil\n\n## Les fonctionnalités clés\n\n- Saisie guidée des transactions avec contrôles de cohérence\n- Détection des doublons et des montants incohérents\n- Recherche instantanée par client, date ou référence\n- Archivage numérique avec accès restreint\n- Indicateurs d'activité : volume, fréquence, anomalies\n- Export des données pour les rapports mensuels\n\n## Le résultat\n\nLe temps de recherche d'un dossier est passé de plusieurs minutes à quelques secondes. Les contrôles automatiques ont permis de repérer des erreurs de saisie avant validation, et l'équipe dispose enfin d'une vision claire de son activité.",
+    "tags": [
+      "Microfinance",
+      "Données",
+      "Archivage"
+    ],
+    "stack": [
+      "MySQL",
+      "PHP",
+      "JavaScript",
+      "Chart.js"
+    ],
+    "cover": "/assets/img/cover-fintrack.svg",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/rubenaime",
+    "featured": false,
+    "order": 3,
+    "createdAt": "2025-11-10T09:00:00.000Z",
+    "updatedAt": "2025-11-10T09:00:00.000Z"
+  },
+  {
+    "id": "p_studiokora",
+    "slug": "studio-kora",
+    "title": "Studio Kora — Motion Reel",
+    "category": "motion",
+    "year": "2025",
+    "role": "Directeur artistique & motion designer",
+    "client": "Projet personnel",
+    "duration": "2 semaines",
+    "excerpt": "Direction artistique et motion design d'une identité de marque pour un studio créatif imaginaire. Typographie, rythme et transitions au service du récit.",
+    "description": "## Le contexte\n\nStudio Kora est un exercice de style : construire l'univers visuel d'un studio créatif africain contemporain, puis le mettre en mouvement. L'objectif était de raconter une marque en moins de trente secondes, sans voix off.\n\n## Mon rôle\n\n- Recherche visuelle et moodboard\n- Création du logotype et de la palette\n- Storyboard et découpage\n- Animation des éléments graphiques\n- Montage, sound design et étalonnage\n\n## Les choix de création\n\nJ'ai travaillé une base sombre, des aplats chauds et une typographie large pour créer une impression de calme et de confiance. Le mouvement reste fluide : pas d'effets gratuits, chaque transition accompagne une idée.\n\n- Palette : noir profond, sable, ambre et un vert acide en accent\n- Typographie : grotesque géométrique pour les titres, monospace pour les labels\n- Rythme : plans courts, respiration au milieu, accélération finale\n- Son : nappe électronique et percussions discrètes\n\n## Le résultat\n\nUn reel de 28 secondes, décliné en formats vertical et carré pour les réseaux sociaux, accompagné d'un kit de cinq animations réutilisables pour la marque.",
+    "tags": [
+      "Motion design",
+      "Identité",
+      "Direction artistique"
+    ],
+    "stack": [
+      "After Effects",
+      "Premiere Pro",
+      "Illustrator",
+      "Photoshop"
+    ],
+    "cover": "/assets/img/cover-motion.svg",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/rubenaime",
+    "featured": false,
+    "order": 4,
+    "createdAt": "2025-09-18T09:00:00.000Z",
+    "updatedAt": "2025-09-18T09:00:00.000Z"
+  },
+  {
+    "id": "p_indigo",
+    "slug": "indigo-ui",
+    "title": "Indigo UI",
+    "category": "design",
+    "year": "2025",
+    "role": "UI designer",
+    "client": "Projet personnel",
+    "duration": "3 semaines",
+    "excerpt": "Design system complet : composants, typographie, couleurs, états et documentation. Une base solide pour construire des interfaces cohérentes plus vite.",
+    "description": "## Le contexte\n\nIndigo UI est un design system pensé pour les projets web que je développe. L'idée : arrêter de redessiner les mêmes boutons, champs et cartes à chaque nouveau projet, et disposer d'une base cohérente, documentée et directement exploitable en code.\n\n## Mon rôle\n\n- Audit des composants utilisés dans mes projets précédents\n- Définition des fondations : couleurs, typographie, espacements, rayons\n- Conception des composants et de leurs variantes\n- Documentation des usages et des états\n- Prototypage des interactions principales\n\n## Ce que contient le système\n\n- Une échelle typographique complète, du display au label\n- Une palette sémantique : surface, texte, bordure, accent, succès, erreur\n- Plus de vingt composants : boutons, champs, cartes, badges, navigation, modales\n- Les états focus, hover, actif, désactivé et chargement\n- Des règles d'accessibilité : contrastes, tailles de cible, focus visible\n- Une documentation claire, avec exemples d'utilisation\n\n## Pourquoi c'est utile\n\nUn design system ne sert pas seulement à gagner du temps : il rend le produit plus prévisible pour l'utilisateur. Les mêmes actions se ressemblent, les mêmes informations se lisent de la même façon. C'est particulièrement important sur les projets à petit budget, où la cohérence fait une grande partie de la qualité perçue.",
+    "tags": [
+      "Design system",
+      "UI Kit",
+      "Documentation"
+    ],
+    "stack": [
+      "Figma",
+      "Design System",
+      "Prototypage"
+    ],
+    "cover": "/assets/img/cover-design.svg",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/rubenaime",
+    "featured": false,
+    "order": 5,
+    "createdAt": "2025-07-05T09:00:00.000Z",
+    "updatedAt": "2025-07-05T09:00:00.000Z"
+  },
+  {
+    "id": "p_portfolio",
+    "slug": "portfolio-360",
+    "title": "Portfolio 360",
+    "category": "web",
+    "year": "2026",
+    "role": "Développeur & designer",
+    "client": "Projet personnel",
+    "duration": "4 semaines",
+    "excerpt": "Ce portfolio : une photo interactive en 3D, un back-office sécurisé pour gérer les projets et un tableau de bord de suivi des visites.",
+    "description": "## Le contexte\n\nCe site est à la fois une vitrine et un terrain d'expérimentation. Je voulais un portfolio qui me ressemble : du code propre, une direction artistique affirmée et une vraie mécanique derrière l'interface.\n\n## Les partis pris\n\n- Une photo interactive que l'on peut faire tourner à 360° avec la souris ou au doigt\n- Une typographie éditoriale, mêlant grotesque géométrique et serif italique\n- Un thème sombre, ponctué d'un vert acide et d'une section claire pour les certificats\n- Des animations discrètes, qui accompagnent la lecture sans la gêner\n\n## Le back-office\n\nLe site dispose d'un espace administrateur protégé qui me permet de gérer mes projets sans toucher au code.\n\n- Authentification par mot de passe haché avec scrypt\n- Sessions signées, cookies HttpOnly et protection CSRF\n- Limitation des tentatives de connexion et en-têtes de sécurité stricts\n- Ajout, modification et suppression de projets, avec upload d'image\n- Tableau de bord des visites : pages vues, visiteurs uniques, durée, appareils, référents\n- Journal des actions et boîte de réception des messages de contact\n\n## La technique\n\nLe site est servi par un serveur Node.js sans dépendance externe. Les données sont stockées dans des fichiers JSON écrits de façon atomique, et les pages de projets sont rendues côté serveur pour rester accessibles et rapides.",
+    "tags": [
+      "3D",
+      "Back-office",
+      "Sécurité"
+    ],
+    "stack": [
+      "Node.js",
+      "JavaScript",
+      "CSS 3D",
+      "Canvas"
+    ],
+    "cover": "/assets/img/cover-portfolio.svg",
+    "liveUrl": "",
+    "repoUrl": "https://github.com/rubenaime",
+    "featured": false,
+    "order": 6,
+    "createdAt": "2026-03-01T09:00:00.000Z",
+    "updatedAt": "2026-03-01T09:00:00.000Z"
+  }
+]

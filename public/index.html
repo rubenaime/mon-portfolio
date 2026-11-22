@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruben EBAH — Développeur logiciel, Designer & Motion Designer</title>
+  <meta name="description" content="Portfolio d'Aimé Kouassi Ruben EBAH, développeur logiciel et créatif digital basé au Bénin. Développement web, design UI/UX, motion design et solutions numériques.">
+  <meta name="author" content="Aimé Kouassi Ruben EBAH">
+  <meta name="theme-color" content="#08090b">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rubenebah.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ruben EBAH — Développeur logiciel, Designer & Motion Designer">
+  <meta property="og:description" content="Je conçois et développe des expériences numériques qui allient code propre, design précis et mouvement.">
+  <meta property="og:image" content="/assets/img/hero.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/portrait.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preload" as="image" href="/assets/img/hero.jpg">
+
+  <script type="application/ld+json" nonce="__CSP_NONCE__">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aimé Kouassi Ruben EBAH",
+    "alternateName": "Ruben EBAH",
+    "jobTitle": "Développeur logiciel & Designer",
+    "email": "mailto:ebahruben9@gmail.com",
+    "telephone": "+2290141765021",
+    "address": { "@type": "PostalAddress", "addressLocality": "Hévié", "addressCountry": "BJ" },
+    "sameAs": [
+      "https://github.com/rubenaime",
+      "https://www.linkedin.com/in/ruben-ebah-33b23368",
+      "https://www.tiktok.com/@ben.dev83"
+    ],
+    "knowsAbout": ["Développement web", "Design UI/UX", "Motion design", "Bases de données SQL", "Prompt engineering"]
+  }
+  </script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#accueil" aria-label="Ruben EBAH — accueil">
+        <span class="brand__mark">RE</span>
+        <span class="brand__text">
+          <span class="brand__name">Ruben EBAH</span>
+          <span class="brand__role">Développeur & Designer</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="#apropos">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#projets">Projets</a>
+        <a href="#certificats">Certificats</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <span class="header-availability"><span class="dot"></span>Disponible</span>
+        <a class="btn btn--sm" href="#contact">
+          Me contacter
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Navigation mobile">
+      <a href="#apropos"><span>01</span>À propos</a>
+      <a href="#services"><span>02</span>Services</a>
+      <a href="#projets"><span>03</span>Projets</a>
+      <a href="#certificats"><span>04</span>Certificats</a>
+      <a href="#parcours"><span>05</span>Parcours</a>
+      <a href="#contact"><span>06</span>Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div class="socials">
+        <a class="social-link" href="https://github.com/rubenaime" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a class="social-link" href="https://www.linkedin.com/in/ruben-ebah-33b23368" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+        </a>
+        <a class="social-link" href="https://www.tiktok.com/@ben.dev83" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <a class="social-link" href="https://wa.me/2290141765021" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+      </div>
+      <a class="btn btn--sm" href="#contact">Démarrer un projet</a>
+    </div>
+  </div>
+
+  <main id="contenu">
+    <!-- HERO -->
+    <section class="hero" id="accueil" aria-label="Présentation">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="hero-status" data-reveal>
+            <span class="dot"></span>
+            Portfolio 2026 — Hévié, Bénin
+          </div>
+
+          <h1 class="hero-title" data-reveal data-delay="1">
+            <span class="line hero-first">Aimé Kouassi</span>
+            <span class="line"><em>Ruben</em> <span class="hero-last">EBAH</span></span>
+          </h1>
+
+          <div class="hero-role" data-reveal data-delay="2">
+            <span class="hero-role__label">Je suis</span>
+            <span class="hero-role__value" id="roleRotator">Développeur logiciel</span>
+          </div>
+
+          <p class="hero-text" data-reveal data-delay="2">
+            Je conçois et développe des expériences numériques qui allient
+            <strong>code propre</strong>, <strong>design précis</strong> et <strong>mouvement</strong>.
+            Basé au Bénin, disponible immédiatement pour un stage, un premier emploi
+            ou une collaboration freelance.
+          </p>
+
+          <div class="hero-actions" data-reveal data-delay="3">
+            <a class="btn" href="#projets">
+              Découvrir mes projets
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Me contacter</a>
+          </div>
+
+          <div class="hero-socials" data-reveal data-delay="4">
+            <span class="hero-socials__label">Retrouvez-moi</span>
+            <div class="socials">
+              <a class="social-link" href="https://github.com/rubenaime" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a class="social-link" href="https://www.linkedin.com/in/ruben-ebah-33b23368" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+              </a>
+              <a class="social-link" href="https://www.tiktok.com/@ben.dev83" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </a>
+              <a class="social-link" href="https://wa.me/2290141765021" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-hero-visual data-reveal="right" data-delay="2">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="hero-orbit hero-orbit--1" aria-hidden="true"></div>
+          <div class="hero-orbit hero-orbit--2" aria-hidden="true"></div>
+          <div class="hero-ring" aria-hidden="true"></div>
+          <div class="hero-ring hero-ring--2" aria-hidden="true"></div>
+
+          <div class="hero-3d" id="hero3d" role="img" aria-label="Portrait de Ruben EBAH. Faites glisser pour faire tourner la photo à 360 degrés." tabindex="0">
+            <div class="hero-card">
+              <div class="hero-face hero-face--front">
+                <img src="/assets/img/hero.jpg" alt="Ruben EBAH, développeur logiciel, en polo noir avec un ordinateur portable" width="960" height="1280" fetchpriority="high">
+              </div>
+              <div class="hero-face hero-face--back" aria-hidden="true">
+                <img src="/assets/img/hero.jpg" alt="" width="960" height="1280">
+              </div>
+              <span class="hero-card__tag"><span class="dot"></span>Ruben EBAH — 2026</span>
+            </div>
+          </div>
+
+          <div class="hero-chip hero-chip--1" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M13 6l-2 12"/></svg>
+            <span><strong>Développement</strong>Web & logiciel</span>
+          </div>
+          <div class="hero-chip hero-chip--2" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4Z"/></svg>
+            <span><strong>Motion design</strong>After Effects</span>
+          </div>
+          <div class="hero-chip hero-chip--3" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.8 2-1.8 0-.6-.2-1-.6-1.4-.4-.4-.6-.8-.6-1.3 0-1 .8-1.8 2-1.8H16a5 5 0 0 0 5-5c0-3.9-4-6.7-9-6.7Z"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="10" r="1"/></svg>
+            <span><strong>Design UI/UX</strong>Figma</span>
+          </div>
+
+          <div class="hero-hint">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>
+            Glissez la photo — 360°
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span class="marquee__item">Développement web</span>
+          <span class="marquee__item">Design UI/UX</span>
+          <span class="marquee__item">Motion design</span>
+          <span class="marquee__item">Bases de données SQL</span>
+          <span class="marquee__item">Prompt engineering</span>
+          <span class="marquee__item">Identité visuelle</span>
+          <span class="marquee__item">Solutions digitales</span>
+        </div>
+        <div class="marquee__group">
+          <span class="marquee__item">Développement web</span>
+          <span class="marquee__item">Design UI/UX</span>
+          <span class="marquee__item">Motion design</span>
+          <span class="marquee__item">Bases de données SQL</span>
+          <span class="marquee__item">Prompt engineering</span>
+          <span class="marquee__item">Identité visuelle</span>
+          <span class="marquee__item">Solutions digitales</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- À PROPOS -->
+    <section class="section about" id="apropos">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-portrait" data-reveal="left">
+            <div class="portrait-frame">
+              <img src="/assets/img/portrait.png" alt="Portrait officiel de Ruben EBAH" width="1080" height="1440" loading="lazy">
+              <div class="portrait-frame__caption">
+                <div>
+                  <strong>Aimé Kouassi Ruben EBAH</strong>
+                  <span>Développeur logiciel & créatif digital</span>
+                </div>
+                <div class="portrait-badge" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" width="62" height="62">
+                    <defs><path id="circlePath" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+                    <text font-family="JetBrains Mono, monospace" font-size="8.2" letter-spacing="1.4" fill="#0a0b0d">
+                      <textPath href="#circlePath">DISPONIBLE · OPEN TO WORK ·</textPath>
+                    </text>
+                    <circle cx="50" cy="50" r="3" fill="#0a0b0d"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <span class="portrait-side">Portrait — Hévié, Bénin — 2026</span>
+          </div>
+
+          <div class="about-copy">
+            <div class="eyebrow" data-reveal><span class="eyebrow__num">01</span> À propos</div>
+            <h2 class="section-title" data-reveal>Le code comme <em>métier</em>,<br>le design comme <em>langage</em>.</h2>
+            <p class="about-lead" data-reveal data-delay="1">
+              Je m'appelle Ruben. Je transforme des idées en interfaces
+              <em>claires</em>, <em>rapides</em> et <em>vivantes</em>.
+            </p>
+            <div class="about-body" data-reveal data-delay="2">
+              <p>
+                Jeune diplômé d'une <strong>Licence professionnelle en Système Informatique et Logiciels (SIL)</strong>
+                à l'ISMT Saint Salomon, je suis développeur logiciel et créatif digital. Mon parcours m'a appris
+                à résoudre des problèmes concrets : maintenance d'un parc informatique, sécurisation de données,
+                support aux utilisateurs et gestion de systèmes d'information.
+              </p>
+              <p>
+                À côté du développement, je pratique le <strong>design d'interface</strong> et le
+                <strong>motion design</strong>. J'aime que chaque projet soit non seulement fonctionnel,
+                mais aussi agréable à regarder et à utiliser. Je m'appuie sur les outils d'IA générative
+                et le prompt engineering pour travailler plus vite, sans jamais sacrifier la qualité.
+              </p>
+            </div>
+
+            <div class="about-meta" data-reveal data-delay="2">
+              <div class="about-meta__item">
+                <span>Localisation</span>
+                <strong>Hévié, Bénin</strong>
+              </div>
+              <div class="about-meta__item">
+                <span>Disponibilité</span>
+                <strong class="accent">Immédiate</strong>
+              </div>
+              <div class="about-meta__item">
+                <span>Langues</span>
+                <strong>Français, Anglais, Fon, Mina</strong>
+              </div>
+              <div class="about-meta__item">
+                <span>Email</span>
+                <strong><a href="mailto:ebahruben9@gmail.com">ebahruben9@gmail.com</a></strong>
+              </div>
+            </div>
+
+            <div class="hero-actions" data-reveal data-delay="3">
+              <a class="btn" href="/assets/CV-Ruben-EBAH.pdf" download>
+                Télécharger mon CV
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+              </a>
+              <a class="link-arrow" href="#parcours">
+                Voir mon parcours
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats" data-reveal>
+          <div class="stat">
+            <div class="stat__num"><span data-count="21">21</span><sup>ans</sup></div>
+            <div class="stat__label">Âge</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span data-count="2">2</span><sup>+</sup></div>
+            <div class="stat__label">Stages professionnels</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span data-count="6">6</span></div>
+            <div class="stat__label">Certifications Cursa</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num"><span data-count="2026">2026</span></div>
+            <div class="stat__label">Licence SIL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-reveal><span class="eyebrow__num">02</span> Services</div>
+            <h2 class="section-title" data-reveal>Ce que je peux<br><em>construire</em> pour vous.</h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-desc" data-reveal data-delay="1">
+              Une approche complète : de la première esquisse à la mise en ligne.
+              Je travaille à la frontière du développement, du design et du mouvement.
+            </p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service" data-reveal>
+            <div class="service__top">
+              <div class="service__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg>
+              </div>
+              <span class="service__num">01</span>
+            </div>
+            <h3>Développement logiciel & web</h3>
+            <p>Des sites et applications rapides, accessibles et pensés pour durer, du prototype à la mise en production.</p>
+            <ul class="service__list">
+              <li>Sites vitrines & e-commerce</li>
+              <li>Applications web sur mesure</li>
+              <li>Bases de données & API</li>
+              <li>Maintenance & support technique</li>
+            </ul>
+          </article>
+
+          <article class="service" data-reveal data-delay="1">
+            <div class="service__top">
+              <div class="service__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.8 2-1.8 0-.6-.2-1-.6-1.4-.4-.4-.6-.8-.6-1.3 0-1 .8-1.8 2-1.8H16a5 5 0 0 0 5-5c0-3.9-4-6.7-9-6.7Z"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="10" r="1"/></svg>
+              </div>
+              <span class="service__num">02</span>
+            </div>
+            <h3>Design d'interface & identité</h3>
+            <p>Des interfaces lisibles, cohérentes et reconnaissables, qui placent l'utilisateur au centre de chaque décision.</p>
+            <ul class="service__list">
+              <li>UI/UX design & prototypage</li>
+              <li>Design systems & composants</li>
+              <li>Identité visuelle de marque</li>
+              <li>Maquettes Figma prêtes à coder</li>
+            </ul>
+          </article>
+
+          <article class="service" data-reveal data-delay="2">
+            <div class="service__top">
+              <div class="service__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4Z"/><path d="M12 3v2M21 12h-2M12 21v-2M3 12h2"/></svg>
+              </div>
+              <span class="service__num">03</span>
+            </div>
+            <h3>Motion design & contenu</h3>
+            <p>Du mouvement au service du message : animations de marque, contenus sociaux et montages qui retiennent l'attention.</p>
+            <ul class="service__list">
+              <li>Motion reels & animations de marque</li>
+              <li>Montage vidéo & habillage</li>
+              <li>Contenus pour réseaux sociaux</li>
+              <li>Habillage graphique & storytelling</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="cert-note" style="background: rgba(255,255,255,.03); border-color: var(--line); color: var(--muted); margin-top: 18px;" data-reveal>
+          <svg viewBox="0 0 24 24" aria-hidden="true" style="stroke: var(--accent);"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          <span><strong style="color: var(--text);">Également :</strong> IA générative, prompt engineering, marketing digital, Excel avancé, Word et gestion de projet.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="section projects" id="projets">
+      <div class="container">
+        <div class="projects-head">
+          <div>
+            <div class="eyebrow" data-reveal><span class="eyebrow__num">03</span> Projets sélectionnés</div>
+            <h2 class="section-title" data-reveal>Des idées devenues<br><em>produits réels</em>.</h2>
+          </div>
+          <div class="filters" id="projectFilters" data-reveal aria-label="Filtrer les projets">
+            <button class="filter is-active" data-filter="all" type="button">Tous</button>
+            <!--PROJECTS_FILTERS-->
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!--PROJECTS_GRID-->
+        </div>
+
+        <div class="projects-foot" data-reveal>
+          <a class="link-arrow" href="https://github.com/rubenaime" target="_blank" rel="noopener noreferrer">
+            Explorer mon GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATS -->
+    <section class="section certificates" id="certificats">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-reveal><span class="eyebrow__num">04</span> Certifications</div>
+            <h2 class="section-title" data-reveal>Des compétences<br><em>vérifiables</em>.</h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-desc" data-reveal data-delay="1">
+              Formations suivies sur la plateforme Cursa, avec code de vérification
+              et certificat original consultable. Cliquez sur un certificat pour l'agrandir.
+            </p>
+          </div>
+        </div>
+
+        <div class="cert-grid">
+          <button class="cert-card" type="button" data-cert="cert1" data-reveal>
+            <span class="cert-card__media">
+              <img src="/assets/img/certificat-sql.jpg" alt="Certificat Cursa — Base de données SQL" width="1280" height="905" loading="lazy">
+              <span class="cert-card__zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5M11 8v6M8 11h6"/></svg>
+              </span>
+            </span>
+            <span class="cert-card__body">
+              <span class="cert-card__top">
+                <span class="cert-card__issuer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 1 7l11 5 9-4.09V17h2V7L12 2Zm-7 9.18V16c0 2.21 3.13 4 7 4s7-1.79 7-4v-4.82l-7 3.18-7-3.18Z"/></svg>
+                  Cursa
+                </span>
+                <span class="cert-card__date">31 OCT. 2025</span>
+              </span>
+              <h3>Base de données SQL</h3>
+              <span class="cert-card__date">8 h 55 — Niveau complet</span>
+              <span class="cert-card__link">Voir le certificat →</span>
+            </span>
+          </button>
+
+          <button class="cert-card" type="button" data-cert="cert2" data-reveal data-delay="1">
+            <span class="cert-card__media">
+              <img src="/assets/img/certificat-informatique.jpg" alt="Certificat Cursa — Informatique pour les débutants et Base de données SQL" width="1280" height="905" loading="lazy">
+              <span class="cert-card__zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5M11 8v6M8 11h6"/></svg>
+              </span>
+            </span>
+            <span class="cert-card__body">
+              <span class="cert-card__top">
+                <span class="cert-card__issuer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 1 7l11 5 9-4.09V17h2V7L12 2Zm-7 9.18V16c0 2.21 3.13 4 7 4s7-1.79 7-4v-4.82l-7 3.18-7-3.18Z"/></svg>
+                  Cursa
+                </span>
+                <span class="cert-card__date">31 OCT. 2025</span>
+              </span>
+              <h3>Informatique & SQL</h3>
+              <span class="cert-card__date">2 modules — 9 h 52</span>
+              <span class="cert-card__link">Voir le certificat →</span>
+            </span>
+          </button>
+
+          <button class="cert-card" type="button" data-cert="cert3" data-reveal data-delay="2">
+            <span class="cert-card__media">
+              <img src="/assets/img/certificat-marketing.jpg" alt="Certificat Cursa — Marketing digital, Excel, Word et SQL" width="1280" height="905" loading="lazy">
+              <span class="cert-card__zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5M11 8v6M8 11h6"/></svg>
+              </span>
+            </span>
+            <span class="cert-card__body">
+              <span class="cert-card__top">
+                <span class="cert-card__issuer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 1 7l11 5 9-4.09V17h2V7L12 2Zm-7 9.18V16c0 2.21 3.13 4 7 4s7-1.79 7-4v-4.82l-7 3.18-7-3.18Z"/></svg>
+                  Cursa
+                </span>
+                <span class="cert-card__date">2025 — 2026</span>
+              </span>
+              <h3>Marketing digital & bureautique</h3>
+              <span class="cert-card__date">5 modules — Word, Excel, SQL…</span>
+              <span class="cert-card__link">Voir le certificat →</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="cert-note" data-reveal>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Chaque certificat est <strong>authentifiable sur Cursa</strong> grâce à son code de validation unique. Les codes officiels sont affichés dans la fiche du certificat.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-reveal><span class="eyebrow__num">05</span> Parcours</div>
+            <h2 class="section-title" data-reveal>Expérience &<br><em>formation</em>.</h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-desc" data-reveal data-delay="1">
+              Un parcours construit entre les systèmes d'information, le support
+              technique et la création numérique.
+            </p>
+          </div>
+        </div>
+
+        <div class="journey-grid">
+          <div class="journey-col" data-reveal="left">
+            <div class="journey-col__head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+              <h3>Expérience professionnelle</h3>
+              <span>02</span>
+            </div>
+            <div class="timeline">
+              <article class="timeline__item">
+                <div class="timeline__date">03/2026 — 06/2026 <span class="badge">3 mois</span></div>
+                <h4>Stagiaire informatique</h4>
+                <div class="timeline__org">ISMT Saint Salomon — Godomey, Bénin</div>
+                <div class="timeline__desc">
+                  Gestion et maintenance du parc informatique de l'université.
+                  <ul>
+                    <li>Réparation du matériel et des logiciels des ordinateurs du campus.</li>
+                    <li>Supervision du réseau Internet et assistance quotidienne aux étudiants, professeurs et administration.</li>
+                    <li>Mise à jour des bases de données et amélioration des outils informatiques.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__date">06/2024 — 09/2024 <span class="badge">3 mois</span></div>
+                <h4>Stagiaire Informatique & Gestion des Systèmes</h4>
+                <div class="timeline__org">P.E.B.Co-BETHESDA — Cocodji, Bénin</div>
+                <div class="timeline__desc">
+                  Contrat de professionnalisation au sein d'une institution de microfinance.
+                  <ul>
+                    <li>Support informatique et maintenance de premier niveau du parc.</li>
+                    <li>Saisie, contrôle de cohérence et mise à jour des transactions financières.</li>
+                    <li>Numérisation et organisation sécurisée des dossiers clients.</li>
+                    <li>Identification et correction de bugs d'utilisation des outils métier.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="journey-col" data-reveal="right">
+            <div class="journey-col__head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 10 5-10 5L2 8l10-5Z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              <h3>Formation</h3>
+              <span>04</span>
+            </div>
+            <div class="timeline">
+              <article class="timeline__item">
+                <div class="timeline__date">09/2025 — 09/2026</div>
+                <h4>Licence professionnelle 3 — SIL</h4>
+                <div class="timeline__org">ISMT Saint Salomon — Godomey, Bénin</div>
+                <div class="timeline__desc">Système Informatique et Logiciels : développement, bases de données, réseaux et gestion des systèmes d'information.</div>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__date">09/2022 — 06/2023</div>
+                <h4>Baccalauréat — Série D</h4>
+                <div class="timeline__org">CEG de Hévié — Bénin</div>
+                <div class="timeline__desc">Sciences exactes et biologiques. Obtention du diplôme avec mention.</div>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__date">2016 — 2019</div>
+                <h4>Brevet d'études du premier cycle — BEPC</h4>
+                <div class="timeline__org">Complexe scolaire bilingue Le Sceau de l'Éternel — Cotonou</div>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__date">2015</div>
+                <h4>Certificat d'études primaires — CEP</h4>
+                <div class="timeline__org">Complexe scolaire privé Le Flambeau — Hévié</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section class="section skills" id="competences">
+      <div class="container">
+        <div class="skills-layout">
+          <div class="skills-copy">
+            <div class="eyebrow" data-reveal><span class="eyebrow__num">06</span> Compétences</div>
+            <h2 class="section-title" data-reveal>Une boîte à outils<br><em>complète</em>.</h2>
+            <p class="section-desc" data-reveal data-delay="1">
+              Du code au motion design, en passant par la donnée et l'IA générative.
+              Les outils changent, la rigueur reste.
+            </p>
+
+
+          </div>
+
+          <div data-reveal="right">
+            <div class="tools">
+              <div class="tool"><span data-icon="html5" class="icon"></span><span>HTML5</span></div>
+              <div class="tool tool--monogram"><span class="tool__monogram">CSS</span><span>CSS3</span></div>
+              <div class="tool"><span data-icon="javascript" class="icon"></span><span>JavaScript</span></div>
+              <div class="tool"><span data-icon="react" class="icon"></span><span>React</span></div>
+              <div class="tool"><span data-icon="nodedotjs" class="icon"></span><span>Node.js</span></div>
+              <div class="tool"><span data-icon="php" class="icon"></span><span>PHP</span></div>
+              <div class="tool"><span data-icon="mysql" class="icon"></span><span>MySQL</span></div>
+              <div class="tool"><span data-icon="python" class="icon"></span><span>Python</span></div>
+              <div class="tool"><span data-icon="git" class="icon"></span><span>Git</span></div>
+              <div class="tool"><span data-icon="figma" class="icon"></span><span>Figma</span></div>
+              <div class="tool tool--monogram"><span class="tool__monogram">Ps</span><span>Photoshop</span></div>
+              <div class="tool tool--monogram"><span class="tool__monogram">Ai</span><span>Illustrator</span></div>
+              <div class="tool tool--monogram"><span class="tool__monogram">Ae</span><span>After Effects</span></div>
+              <div class="tool tool--monogram"><span class="tool__monogram">Pr</span><span>Premiere Pro</span></div>
+              <div class="tool tool--monogram"><span class="tool__monogram">W</span><span>Word</span></div>
+              <div class="tool tool--monogram"><span class="tool__monogram">X</span><span>Excel</span></div>
+              <div class="tool"><span data-icon="googlegemini" class="icon"></span><span>IA générative</span></div>
+              <div class="tool"><span data-icon="notion" class="icon"></span><span>Notion</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+        <div class="eyebrow" data-reveal><span class="eyebrow__num">07</span> Contact</div>
+        <h2 class="contact-title" data-reveal>Un projet en tête ?<br><em>Construisons-le.</em></h2>
+        <p class="contact-lead" data-reveal data-delay="1">
+          Disponible pour un stage, un premier emploi ou une collaboration freelance.
+          Décrivez-moi votre besoin — je vous réponds sous 24 heures.
+        </p>
+
+        <div class="contact-grid">
+          <div data-reveal="left">
+            <div class="contact-channels">
+              <a class="channel" href="mailto:ebahruben9@gmail.com">
+                <span class="channel__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                </span>
+                <span>
+                  <span class="channel__label">Email</span>
+                  <span class="channel__value">ebahruben9@gmail.com</span>
+                </span>
+                <span class="channel__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+              </a>
+
+              <a class="channel" href="tel:+2290141765021">
+                <span class="channel__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3h3l1.5 4.5-2 1.5a14 14 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+                </span>
+                <span>
+                  <span class="channel__label">Téléphone</span>
+                  <span class="channel__value">+229 01 41 76 50 21</span>
+                </span>
+                <span class="channel__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+              </a>
+
+              <a class="channel" href="https://wa.me/2290141765021" target="_blank" rel="noopener noreferrer">
+                <span class="channel__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </span>
+                <span>
+                  <span class="channel__label">WhatsApp</span>
+                  <span class="channel__value">Discuter maintenant</span>
+                </span>
+                <span class="channel__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+              </a>
+
+              <a class="channel" href="https://www.google.com/maps/search/H%C3%A9vi%C3%A9,+B%C3%A9nin" target="_blank" rel="noopener noreferrer">
+                <span class="channel__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </span>
+                <span>
+                  <span class="channel__label">Localisation</span>
+                  <span class="channel__value">Hévié, Bénin</span>
+                </span>
+                <span class="channel__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+              </a>
+            </div>
+
+            <div class="contact-socials">
+              <span class="contact-socials__label">Réseaux</span>
+              <div class="socials">
+                <a class="social-link social-link--lg" href="https://github.com/rubenaime" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a class="social-link social-link--lg" href="https://www.linkedin.com/in/ruben-ebah-33b23368" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                  <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                </a>
+                <a class="social-link social-link--lg" href="https://www.tiktok.com/@ben.dev83" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                </a>
+                <a class="social-link social-link--lg" href="https://wa.me/2290141765021" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div data-reveal="right">
+            <form class="form-card" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Nom complet</label>
+                  <input type="text" id="name" name="name" placeholder="Votre nom" autocomplete="name" required maxlength="80">
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="vous@exemple.com" autocomplete="email" required maxlength="120">
+                </div>
+              </div>
+              <div class="field">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" placeholder="Stage, projet, collaboration…" required maxlength="140">
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Parlez-moi de votre projet, de vos objectifs et de votre échéance." required maxlength="4000"></textarea>
+              </div>
+              <div class="field field--hp" aria-hidden="true">
+                <label for="website">Site web</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <button class="btn btn--block" type="submit" id="contactSubmit">
+                Envoyer le message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
+              </button>
+              <div class="form-note">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                Vos données servent uniquement à vous répondre. Aucun partage avec des tiers.
+              </div>
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#accueil" aria-label="Ruben EBAH — accueil">
+            <span class="brand__mark">RE</span>
+            <span class="brand__text">
+              <span class="brand__name">Ruben EBAH</span>
+              <span class="brand__role">Développeur & Designer</span>
+            </span>
+          </a>
+          <p>Développeur logiciel et créatif digital basé à Hévié, Bénin. Je conçois des expériences numériques utiles, belles et durables.</p>
+          <div class="socials" style="margin-top: 20px;">
+            <a class="social-link" href="https://github.com/rubenaime" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/ruben-ebah-33b23368" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+            </a>
+            <a class="social-link" href="https://www.tiktok.com/@ben.dev83" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <a class="social-link" href="https://wa.me/2290141765021" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#certificats">Certificats</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liens directs</h4>
+          <ul>
+            <li><a href="mailto:ebahruben9@gmail.com">Email</a></li>
+            <li><a href="https://wa.me/2290141765021" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="https://github.com/rubenaime" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ruben-ebah-33b23368" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="/assets/CV-Ruben-EBAH.pdf" download>CV (PDF)</a></li>
+            <li><a href="/admin">Espace admin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Aimé Kouassi Ruben EBAH — Tous droits réservés</span>
+        <span>Conçu & développé avec rigueur — Bénin</span>
+        <a class="footer-admin" href="/admin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Espace administrateur
+        </a>
+      </div>
+    </div>
+    <div class="footer-mark" aria-hidden="true">RUBEN</div>
+  </footer>
+
+  <!-- LIGHTBOX CERTIFICATS -->
+  <div class="lightbox" id="certLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
+    <div class="lightbox__panel">
+      <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Fermer">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="lightbox__media">
+        <img id="lightboxImage" src="" alt="">
+      </div>
+      <div class="lightbox__info">
+        <div>
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDesc"></p>
+        </div>
+        <div class="lightbox__code">
+          <strong>Code de vérification</strong>
+          <span id="lightboxCode"></span>
+        </div>
+      </div>
+      <div style="padding: 0 12px 14px;">
+        <a class="btn btn--sm" id="lightboxVerify" href="#" target="_blank" rel="noopener noreferrer">
+          Vérifier sur Cursa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/icons.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Fichiers à ne pas versionner
+data/admin.json
+data/visits.json
+data/messages.json
+data/actions.json
+data/*.tmp
+public/uploads/*
+!public/uploads/.gitkeep
+node_modules/
+.env
+*.log
+.DS_Store
+Thumbs.db

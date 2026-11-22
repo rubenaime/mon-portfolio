@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Visuel de projet">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2418"/><stop offset="1" stop-color="#071009"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid3" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <filter id="blur3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="noise3"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".05"/></feComponentTransfer><feComposite operator="in" in2="SourceGraphic"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg3)"/>
+  <rect width="1600" height="1000" fill="url(#grid3)"/>
+  <ellipse cx="1180" cy="180" rx="520" ry="420" fill="url(#glow3)" opacity=".5"/>
+  <circle cx="1240" cy="820" r="360" fill="#ffffff" opacity=".05" filter="url(#blur3)"/>
+  
+  <g transform="translate(140 210)">
+    <rect width="900" height="560" rx="26" fill="#08130c" stroke="#ffffff" stroke-opacity=".13"/>
+    <rect x="36" y="36" width="180" height="14" rx="7" fill="#ffffff" fill-opacity=".18"/>
+    <rect x="36" y="64" width="110" height="9" rx="4" fill="#ffffff" fill-opacity=".09"/>
+    <g transform="translate(36 120)">
+      <rect width="390" height="180" rx="18" fill="#ffffff" fill-opacity=".04"/>
+      <text x="28" y="46" font-family="monospace" font-size="14" letter-spacing="3" fill="#86efac" fill-opacity=".8">SOLDE AGENCE</text>
+      <text x="28" y="108" font-family="sans-serif" font-size="52" font-weight="700" fill="#ecfdf5">12 840 000</text>
+      <text x="28" y="146" font-family="monospace" font-size="16" fill="#86efac">+ 8,4% ce mois</text>
+    </g>
+    <g transform="translate(456 120)">
+      <rect width="408" height="180" rx="18" fill="#ffffff" fill-opacity=".04"/>
+      <text x="26" y="42" font-family="monospace" font-size="14" letter-spacing="3" fill="#86efac" fill-opacity=".8">TRANSACTIONS</text>
+      <g transform="translate(26 70)"><circle cx="5" cy="5" r="4" fill="#86efac" fill-opacity=".8"/><rect x="20" y="0" width="180" height="9" rx="4" fill="#ffffff" fill-opacity=".16"/><rect x="330" y="0" width="50" height="9" rx="4" fill="#ffffff" fill-opacity=".09"/></g><g transform="translate(26 96)"><circle cx="5" cy="5" r="4" fill="#86efac" fill-opacity=".8"/><rect x="20" y="0" width="200" height="9" rx="4" fill="#ffffff" fill-opacity=".16"/><rect x="330" y="0" width="50" height="9" rx="4" fill="#ffffff" fill-opacity=".09"/></g><g transform="translate(26 122)"><circle cx="5" cy="5" r="4" fill="#86efac" fill-opacity=".8"/><rect x="20" y="0" width="220" height="9" rx="4" fill="#ffffff" fill-opacity=".16"/><rect x="330" y="0" width="50" height="9" rx="4" fill="#ffffff" fill-opacity=".09"/></g><g transform="translate(26 148)"><circle cx="5" cy="5" r="4" fill="#86efac" fill-opacity=".8"/><rect x="20" y="0" width="240" height="9" rx="4" fill="#ffffff" fill-opacity=".16"/><rect x="330" y="0" width="50" height="9" rx="4" fill="#ffffff" fill-opacity=".09"/></g>
+    </g>
+    <g transform="translate(36 330)">
+      <rect x="0" y="150" width="34" height="30" rx="8" fill="#86efac" fill-opacity="0.25"/><rect x="68" y="102.71843656131095" width="34" height="77.28156343868905" rx="8" fill="#86efac" fill-opacity="0.305"/><rect x="136" y="102.98147277795397" width="34" height="77.01852722204603" rx="8" fill="#86efac" fill-opacity="0.36"/><rect x="204" y="137.70081773179407" width="34" height="42.29918226820592" rx="8" fill="#86efac" fill-opacity="0.41500000000000004"/><rect x="272" y="149.84658435343363" width="34" height="30.153415646566373" rx="8" fill="#86efac" fill-opacity="0.47"/><rect x="340" y="111.17661992795703" width="34" height="68.82338007204297" rx="8" fill="#86efac" fill-opacity="0.525"/><rect x="408" y="58.253285446033885" width="34" height="121.74671455396611" rx="8" fill="#86efac" fill-opacity="0.5800000000000001"/><rect x="476" y="45.81604367646878" width="34" height="134.18395632353122" rx="8" fill="#86efac" fill-opacity="0.635"/><rect x="544" y="76.97307124891918" width="34" height="103.02692875108082" rx="8" fill="#86efac" fill-opacity="0.69"/><rect x="612" y="99.23744920265965" width="34" height="80.76255079734035" rx="8" fill="#86efac" fill-opacity="0.745"/><rect x="680" y="71.4629167200174" width="34" height="108.5370832799826" rx="8" fill="#86efac" fill-opacity="0.8"/><rect x="748" y="16.317059411711085" width="34" height="163.68294058828891" rx="8" fill="#86efac" fill-opacity="0.855"/>
+      <line x1="0" y1="180" x2="820" y2="180" stroke="#ffffff" stroke-opacity=".12"/>
+      <path d="M0 150 L68 130 L136 140 L204 96 L272 110 L340 74 L408 86 L476 56 L544 70 L612 40 L680 54 L748 24" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g transform="translate(1130 300)">
+    <circle cx="190" cy="190" r="150" fill="none" stroke="#4ade80" stroke-opacity=".25" stroke-width="34"/>
+    <circle cx="190" cy="190" r="150" fill="none" stroke="#86efac" stroke-width="34" stroke-dasharray="690 943" stroke-linecap="round" transform="rotate(-90 190 190)"/>
+    <text x="190" y="205" text-anchor="middle" font-family="sans-serif" font-size="54" font-weight="700" fill="#ecfdf5">73%</text>
+    <text x="190" y="240" text-anchor="middle" font-family="monospace" font-size="14" letter-spacing="3" fill="#86efac" fill-opacity=".7">OBJECTIF</text>
+  </g>
+  <text x="120" y="900" font-family="monospace" font-size="20" letter-spacing="10" fill="#ffffff" fill-opacity=".4">MICROFINANCE / DONNEES SECURISEES</text>
+
+  <rect width="1600" height="1000" filter="url(#noise3)" opacity=".5"/>
+  <rect x="1260" y="120" width="220" height="10" rx="5" fill="#86efac" fill-opacity=".3"/>
+</svg>

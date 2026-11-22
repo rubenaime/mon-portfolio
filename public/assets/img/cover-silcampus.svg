@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Visuel de projet">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1b3a"/><stop offset="1" stop-color="#070d1c"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid2" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <filter id="blur2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="noise2"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".05"/></feComponentTransfer><feComposite operator="in" in2="SourceGraphic"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg2)"/>
+  <rect width="1600" height="1000" fill="url(#grid2)"/>
+  <ellipse cx="1180" cy="180" rx="520" ry="420" fill="url(#glow2)" opacity=".5"/>
+  <circle cx="1240" cy="820" r="360" fill="#ffffff" opacity=".05" filter="url(#blur2)"/>
+  
+  <g transform="translate(160 230)" stroke="#7dd3fc" stroke-opacity=".55">
+    <line x1="0" y1="60" x2="150" y2="190" stroke-width="1.2"/><line x1="210" y1="150" x2="360" y2="280" stroke-width="1.2"/><line x1="420" y1="60" x2="570" y2="190" stroke-width="1.2"/><line x1="630" y1="170" x2="780" y2="300" stroke-width="1.2"/><line x1="840" y1="70" x2="990" y2="200" stroke-width="1.2"/>
+    <g>
+      <circle cx="150" cy="190" r="26" fill="#0d1b3a" stroke-width="1.5"/>
+      <circle cx="150" cy="190" r="7" fill="#7dd3fc"/>
+    </g><g>
+      <circle cx="360" cy="280" r="26" fill="#0d1b3a" stroke-width="1.5"/>
+      <circle cx="360" cy="280" r="7" fill="#a5b4fc"/>
+    </g><g>
+      <circle cx="570" cy="190" r="26" fill="#0d1b3a" stroke-width="1.5"/>
+      <circle cx="570" cy="190" r="7" fill="#67e8f9"/>
+    </g><g>
+      <circle cx="780" cy="300" r="26" fill="#0d1b3a" stroke-width="1.5"/>
+      <circle cx="780" cy="300" r="7" fill="#93c5fd"/>
+    </g><g>
+      <circle cx="990" cy="200" r="26" fill="#0d1b3a" stroke-width="1.5"/>
+      <circle cx="990" cy="200" r="7" fill="#c4b5fd"/>
+    </g>
+  </g>
+  <g transform="translate(170 560)">
+    <rect width="700" height="270" rx="20" fill="#08101f" stroke="#ffffff" stroke-opacity=".12"/>
+    <rect x="0" y="0" width="700" height="44" rx="20" fill="#ffffff" fill-opacity=".04"/>
+    <circle cx="26" cy="22" r="5" fill="#7dd3fc"/><circle cx="46" cy="22" r="5" fill="#ffffff" fill-opacity=".2"/><circle cx="66" cy="22" r="5" fill="#ffffff" fill-opacity=".2"/>
+    <text x="28" y="82" font-family="monospace" font-size="18" fill="#7dd3fc" fill-opacity="0.95">$ ssh admin@ismt-campus</text><text x="28" y="112" font-family="monospace" font-size="18" fill="#cbd5e1" fill-opacity="0.6">> scan --network 192.168.1.0/24</text><text x="28" y="142" font-family="monospace" font-size="18" fill="#cbd5e1" fill-opacity="0.6">  [ok] 42 postes connectes</text><text x="28" y="172" font-family="monospace" font-size="18" fill="#cbd5e1" fill-opacity="0.6">  [ok] pare-feu actif</text><text x="28" y="202" font-family="monospace" font-size="18" fill="#cbd5e1" fill-opacity="0.6">> backup --database campus</text><text x="28" y="232" font-family="monospace" font-size="18" fill="#cbd5e1" fill-opacity="0.6">  [ok] 100% verifie</text>
+  </g>
+  <g transform="translate(1010 240)">
+    <rect x="0" y="0" width="420" height="300" rx="24" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".12"/>
+    <text x="40" y="70" font-family="monospace" font-size="16" letter-spacing="4" fill="#7dd3fc" fill-opacity=".8">RESEAU</text>
+    <text x="40" y="150" font-family="sans-serif" font-size="76" font-weight="700" fill="#e0f2fe">99,9%</text>
+    <rect x="40" y="190" width="340" height="10" rx="5" fill="#ffffff" fill-opacity=".1"/>
+    <rect x="40" y="190" width="300" height="10" rx="5" fill="#7dd3fc"/>
+    <text x="40" y="250" font-family="sans-serif" font-size="18" fill="#ffffff" fill-opacity=".5">Disponibilite du parc</text>
+  </g>
+  <text x="120" y="900" font-family="monospace" font-size="20" letter-spacing="10" fill="#ffffff" fill-opacity=".4">ADMINISTRATION SYSTEME / SUPPORT IT</text>
+
+  <rect width="1600" height="1000" filter="url(#noise2)" opacity=".5"/>
+  <circle cx="1450" cy="800" r="220" fill="none" stroke="#7dd3fc" stroke-opacity=".2"/>
+</svg>

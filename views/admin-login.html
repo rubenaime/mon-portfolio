@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion — Espace administrateur</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#08090b">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body>
+  <div class="login-page">
+    <section class="login-visual" aria-hidden="true">
+      <div class="login-visual__bg"></div>
+      <div class="login-brand">
+        <span class="login-brand__mark">RE</span>
+        <span>Ruben EBAH<small>Portfolio 2026</small></span>
+      </div>
+
+      <div class="login-visual__content">
+        <div class="login-visual__kicker">Espace privé</div>
+        <h1>Votre espace<br><em>de gestion.</em></h1>
+        <p>Pilotez vos projets, suivez les visites de votre portfolio et gardez le contrôle sur votre présence en ligne.</p>
+        <ul class="login-features">
+          <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Gestion des projets sans toucher au code</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Statistiques de visites détaillées</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Journal des actions et messages reçus</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Connexion protégée et sessions sécurisées</li>
+        </ul>
+      </div>
+
+      <div class="login-visual__foot">© {{YEAR_NOW}} Aimé Kouassi Ruben EBAH — Accès réservé</div>
+    </section>
+
+    <section class="login-form-wrap">
+      <div class="login-card">
+        <div class="login-badge">Administration</div>
+        <h2>Connexion</h2>
+        <p>Identifiez-vous pour accéder au tableau de bord.</p>
+
+        <form class="login-form" id="loginForm" novalidate>
+          <div class="login-field">
+            <label for="username">Identifiant</label>
+            <div class="login-input">
+              <input type="text" id="username" name="username" placeholder="Votre identifiant" autocomplete="username" required maxlength="80" autofocus>
+            </div>
+          </div>
+
+          <div class="login-field">
+            <label for="password">Mot de passe</label>
+            <div class="login-input login-input--password">
+              <input type="password" id="password" name="password" placeholder="Votre mot de passe" autocomplete="current-password" required maxlength="200">
+              <button class="login-eye" type="button" id="togglePassword" aria-label="Afficher le mot de passe">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="login-error" id="loginError" role="alert" aria-live="polite"></div>
+
+          <button class="login-submit" type="submit" id="loginSubmit">
+            Se connecter
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+
+        <div class="login-security">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Connexion protégée : 5 tentatives maximum, puis verrouillage temporaire de 15 minutes. Ne partagez jamais vos identifiants.</span>
+        </div>
+
+        <a class="login-back" href="/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+          Retour au portfolio
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script src="/assets/js/login.js" defer></script>
+</body>
+</html>
