@@ -16,8 +16,26 @@ const crypto = require('crypto');
 const ROOT = __dirname;
 const PUBLIC_DIR = path.join(ROOT, 'public');
 const VIEWS_DIR = path.join(ROOT, 'views');
-const DATA_DIR = path.join(ROOT, 'data');
-const UPLOAD_DIR = path.join(PUBLIC_DIR, 'uploads');
+const IS_VERCEL = Boolean(process.env.VERCEL || process.env.VERCEL_ENV);
+// Sur Vercel, le système de fichiers est en lecture seule sauf /tmp
+const DATA_DIR = IS_VERCEL ? '/tmp/data' : path.join(ROOT, 'data');
+const UPLOAD_DIR = IS_VERCEL ? '/tmp/uploads' : path.join(PUBLIC_DIR, 'uploads');
+
+// Initialise les dossiers et les données sur Vercel (copie depuis le dépôt)
+if (IS_VERCEL) {
+  try {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+    fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+    const srcData = path.join(ROOT, 'data');
+    for (const name of ['projects', 'icons', 'admin']) {
+      const src = path.join(srcData, name + '.json');
+      const dst = path.join(DATA_DIR, name + '.json');
+      if (fs.existsSync(src) && !fs.existsSync(dst)) {
+        fs.copyFileSync(src, dst);
+      }
+    }
+  } catch (err) { console.error('[vercel] init data:', err.message); }
+}
 
 const PORT = Number(process.env.PORT) || 4173;
 const HOST = process.env.HOST || '127.0.0.1';
@@ -1233,7 +1251,7 @@ function handlePublicProjects(req, res) {
 
 /* ---------- Routeur ---------- */
 
-const server = http.createServer(async (req, res) => {
+async function handleRequest(req, res) {
   const nonce = crypto.randomBytes(18).toString('base64');
 
   // Protection anti-DoS / anti-abus : limitation globale par IP
@@ -1252,10 +1270,14 @@ const server = http.createServer(async (req, res) => {
   // Validation de l'en-tête Host (anti-injection)
   const hostHeader = String(req.headers.host || '');
   const allowedHosts = new Set(['localhost:' + PORT, '127.0.0.1:' + PORT, 'localhost', '127.0.0.1']);
+  // Autorise localhost/127.0.0.1 sur n'importe quel port (dev, tests)
+  if (/^(localhost|127\.0\.0\.1)(:\d+)?$/.test(hostHeader)) allowedHosts.add(hostHeader);
   if (SITE_URL) {
     try { allowedHosts.add(new URL(SITE_URL).host); } catch (err) { /* ignore */ }
   }
   if (HOST && HOST !== '127.0.0.1' && HOST !== 'localhost') allowedHosts.add(HOST + (PORT ? ':' + PORT : ''));
+  // Sur Vercel, l'hôte est géré par la plateforme
+  if (IS_VERCEL) allowedHosts.add(hostHeader);
   if (hostHeader && !allowedHosts.has(hostHeader)) {
     res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8', 'X-Content-Type-Options': 'nosniff' });
     return res.end('Hôte non autorisé.');
@@ -1376,37 +1398,40 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(status, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end(status === 500 ? 'Erreur interne du serveur.' : err.message);
   }
-});
+}
 
-// Durcissement du serveur HTTP (anti-slowloris, anti-abus)
-server.timeout = 30000;
-server.requestTimeout = 30000;
-server.headersTimeout = 15000;
-server.keepAliveTimeout = 5000;
-server.maxHeadersCount = 50;
+// Export pour Vercel (serverless) ; sinon démarrage du serveur HTTP classique
+if (IS_VERCEL) {
+  module.exports = handleRequest;
+} else {
+  const server = http.createServer(handleRequest);
+  server.timeout = 30000;
+  server.requestTimeout = 30000;
+  server.headersTimeout = 15000;
+  server.keepAliveTimeout = 5000;
+  server.maxHeadersCount = 50;
+  server.listen(PORT, HOST, () => {
+    const base = 'http://' + (HOST === '0.0.0.0' ? 'localhost' : HOST) + ':' + PORT;
+    console.log('');
+    console.log('  Portfolio Ruben EBAH — serveur démarré');
+    console.log('  Site public  : ' + base + '/');
+    console.log('  Admin        : ' + base + '/admin');
+    console.log('  Données      : ' + DATA_DIR);
+    console.log('  Arrêt        : Ctrl + C');
+    console.log('');
+  });
+  server.on('error', err => {
+    if (err.code === 'EADDRINUSE') {
+      console.error('Le port ' + PORT + ' est déjà utilisé. Définissez PORT=autre_port.');
+    } else {
+      console.error(err);
+    }
+    process.exit(1);
+  });
+}
 
 function siteBase(req) {
   if (SITE_URL) return SITE_URL;
   const proto = SECURE_COOKIES ? 'https' : 'http';
   return proto + '://' + (req.headers.host || 'localhost:' + PORT);
 }
-
-server.listen(PORT, HOST, () => {
-  const base = 'http://' + (HOST === '0.0.0.0' ? 'localhost' : HOST) + ':' + PORT;
-  console.log('');
-  console.log('  Portfolio Ruben EBAH — serveur démarré');
-  console.log('  Site public  : ' + base + '/');
-  console.log('  Admin        : ' + base + '/admin');
-  console.log('  Données      : ' + DATA_DIR);
-  console.log('  Arrêt        : Ctrl + C');
-  console.log('');
-});
-
-server.on('error', err => {
-  if (err.code === 'EADDRINUSE') {
-    console.error('Le port ' + PORT + ' est déjà utilisé. Définissez PORT=autre_port.');
-  } else {
-    console.error(err);
-  }
-  process.exit(1);
-});
